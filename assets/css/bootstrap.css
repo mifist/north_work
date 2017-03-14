@@ -16887,14 +16887,30 @@ textareahover {
 }
 
 /* Registration */
+.--requared {
+  position: relative;
+}
+
+.--requared:after {
+  content: '\e925';
+  font-family: "MobiriseIcons", sans-serif !important;
+  color: #ff0000;
+  font-size: 2rem;
+  position: absolute;
+  right: -30px;
+  top: 13px;
+}
+
 .form-wrap {
   border: 1px solid rgba(37, 42, 25, 0.31);
   padding: 30px 60px;
   margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 1px;
 }
 
-.form-wrap {
-  border-radius: 1px;
+.form-wrap .form-item {
+  margin-bottom: 3rem;
 }
 
 .form-image {
@@ -16955,10 +16971,12 @@ textareahover {
 .entry-warning {
   color: #ff0000;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .entry-warning .mbri-flag {
   color: #ff0000;
+  font-size: 2rem;
 }
 
 /*
