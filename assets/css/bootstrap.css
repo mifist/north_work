@@ -14915,9 +14915,21 @@ ul {
   padding-left: 0;
 }
 
+ul li ul, ul li ol {
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 ol li {
   padding-left: 15px;
   margin-bottom: 10px;
+}
+
+ol li ol, ol li ul {
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .--bold {
@@ -14985,6 +14997,7 @@ h5 {
   font-weight: 600;
   text-transform: inherit;
   text-align: left;
+  margin-bottom: 30px;
 }
 
 h6 {
@@ -16306,6 +16319,14 @@ a::after {
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "FiraSansLight";
+  src: url("../fonts/FiraSans-Light.eot");
+  src: url("../fonts/FiraSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Light.woff") format("woff"), url("../fonts/FiraSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
 .sites-button {
   background: #FF6908;
   font-size: 1.25rem;
@@ -16418,10 +16439,6 @@ a::after {
   max-width: 250px;
 }
 
-.btn._large {
-  max-width: 350px;
-}
-
 .btn._back {
   margin: 0;
   margin-bottom: 15px;
@@ -16432,9 +16449,153 @@ a::after {
   margin-bottom: 0;
 }
 
+.btn._large {
+  max-width: 350px;
+  margin-bottom: 15px;
+}
+
 .dotted {
   border-style: dashed;
   margin: 2rem 0;
+}
+
+/* Yoshiko */
+.input--yoshiko {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.field--yoshiko {
+  float: right;
+  padding: 0.8em;
+  background: transparent;
+  font-weight: 400;
+  font-family: "FiraSansLight", sans-serif;
+  -webkit-appearance: none;
+  border: 1px solid #ec971c;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.label--yoshiko {
+  font-family: "FiraSansLight", sans-serif;
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  top: calc(-150%);
+  pointer-events: none;
+  overflow: hidden;
+  padding: 0 15px;
+  -webkit-transform: translate3d(0, 3em, 0);
+          transform: translate3d(0, 3em, 0);
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  transition-timing-function: ease-in-out;
+  min-height: 45px;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.content--yoshiko {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "FiraSansLight", sans-serif;
+  line-height: 45px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b5b5b5;
+  display: inline-block;
+  padding: 0 15px;
+  min-height: 45px;
+  height: 100%;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  transition-timing-function: ease-in-out;
+}
+
+.content--yoshiko::after {
+  content: attr(data-content);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #ec971c;
+  font-family: "FiraSansLight", sans-serif;
+  bottom: calc(155%);
+  right: 0;
+  height: 20px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.field--yoshiko:focus + .label--yoshiko,
+.input--filled .label--yoshiko {
+  -webkit-transform: translate3d(0, 110%, 0);
+          transform: translate3d(0, 110%, 0);
+}
+
+.field--yoshiko:focus + .label--yoshiko .content--yoshiko,
+.input--filled .label--yoshiko .content--yoshiko {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+.field--yoshiko:focus + .field--yoshiko,
+.input--filled .field--yoshiko {
+  background-color: transparent;
+  border-color: #ec971c;
+}
+
+/* SIMPLE */
+.form-wrap .form-item:not(:last-child).--simple {
+  margin-bottom: 15px;
+}
+
+.form-wrap .form-item:first-child.--simple {
+  margin-bottom: 30px;
+}
+
+.--simple .field--yoshiko {
+  margin-top: 30px;
+}
+
+.--simple .label--yoshiko {
+  top: 5px;
+  bottom: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  height: 25px;
+  min-height: initial;
+}
+
+.--simple .content--yoshiko {
+  color: #000;
+  line-height: initial;
+  top: initial;
+  bottom: initial;
+  height: 25px;
+  min-height: initial;
+}
+
+.--simple .content--yoshiko:after {
+  bottom: calc(100%);
+  right: 0;
+  height: 25px;
+}
+
+.--simple .field--yoshiko:focus + .label--yoshiko,
+.--simple .input--filled .label--yoshiko {
+  -webkit-transform: translate3d(0, -3%, 0);
+          transform: translate3d(0, -3%, 0);
 }
 
 .checkbox {
@@ -16449,6 +16610,10 @@ a::after {
   position: relative;
   padding-left: 5px;
   margin-left: 45px;
+  font-size: 1.7rem;
+  min-height: 25px;
+  font-weight: 400;
+  padding-top: 3px;
 }
 
 .checkbox label:before {
@@ -16458,7 +16623,8 @@ a::after {
   width: 25px;
   height: 25px;
   left: 0;
-  bottom: -2px;
+  top: 0;
+  bottom: initial;
   margin-left: -45px;
   border: 1px solid #ec971c;
   border-radius: 5px;
@@ -16472,13 +16638,13 @@ a::after {
   width: 25px;
   height: 25px;
   left: 0;
-  bottom: -2px;
+  bottom: 0;
   margin-left: -47px;
   border-radius: 5px;
-  top: 0;
+  top: 2px;
   padding-left: 6px;
   padding-top: 0;
-  font-size: 15px;
+  font-size: 16px;
   color: #ec971c;
 }
 
@@ -16534,6 +16700,10 @@ a::after {
 }
 
 .checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
+.radio + .radio, .checkbox + .checkbox {
   margin-top: 0;
 }
 
@@ -16807,19 +16977,30 @@ input[type="radio"] .styled:checked + label:after {
   color: #ec971c;
   min-height: 25px;
   display: none;
+  font-weight: 400;
 }
 
 label {
-  font-family: "Open Sans", sans-serif;
+  font-family: "FiraSansLight", sans-serif;
+  font-weight: 400;
   font-size: 24px;
 }
 
+/*input:required:invalid {
+  border:1px solid #ff0000;
+  box-shadow: (0 0 3px #ff0000);
+}
+input:invalid {
+  border:1px solid #ff0000;
+  box-shadow: (0 0 3px #ff0000);
+}*/
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-family: "FiraSansLight", sans-serif;
   border: 1px solid #ec971c;
   border-radius: 5px;
   min-height: 45px;
@@ -16837,8 +17018,7 @@ selecthover,
 textarea:focus,
 textareahover {
   outline: none;
-  -webkit-filter: drop-shadow(0 0 1px #ec971c);
-          filter: drop-shadow(0 0 1px #ec971c);
+  box-shadow: 0 0 3px #ec971c;
 }
 
 /* Apply outline styles only when input method is keyboard
@@ -16909,7 +17089,7 @@ textareahover {
   border-radius: 1px;
 }
 
-.form-wrap .form-item {
+.form-wrap .form-item:not(:last-child) {
   margin-bottom: 3rem;
 }
 
@@ -16923,10 +17103,22 @@ textareahover {
   display: block;
   text-align: center;
   margin: 0 auto;
-  max-width: 175px;
+  max-width: 400px;
   max-height: 175px;
-  width: 100%;
+  width: auto;
   height: auto;
+  border: 1px solid #ccc;
+}
+
+.--message {
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.--message .checkbox {
+  text-align: left;
 }
 
 .page-default {
@@ -16966,6 +17158,11 @@ textareahover {
 
 .entry-more {
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.entry-more p {
+  text-align: center;
 }
 
 .entry-warning {
@@ -16977,6 +17174,7 @@ textareahover {
 .entry-warning .mbri-flag {
   color: #ff0000;
   font-size: 2rem;
+  margin-right: 5px;
 }
 
 /*
