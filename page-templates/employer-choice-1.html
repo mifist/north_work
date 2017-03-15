@@ -96,18 +96,20 @@
 		<div class="page container">
 			<!-- Start content -->
 			<div class="entry-content">
-				<div class="row">
+				<div class="row"><!-- Start row -->
 					<h2 class="entry-title">Форма регистрации</h2>
-					<p class="text-center entry-more">Пожалуйста, указывайте корректные данные</p>
+					<div class="entry-more">
+						<p>Реквизиты будут использоваться для формирования счетов и других финансовых документов.</p>
+						<p>Пожалуйста, указывайте корректные данные</p>
+					</div>
 					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7"><!-- Start Form -->
 						<!-- Photo -->
 						<div class="form-wrap">
-							<a class="btn _small _back" onclick="history.back(); return false;">Назад</a>
-							<h5>Фото профиля</h5>
+							<h5>Ваш логтип</h5>
 							<div class="form-image">
-								<img src="../assets/images/face.png" alt="Profile photo">
+								<img src="../assets/images/images.jpg" alt="Logotype">
 							</div>
-							<a class="btn _small --download">ЗАГРУЗИТь ФОТО</a>
+							<a class="btn _small --download">ЗАГРУЗИТЬ ЛОГОТИП</a>
 						</div>
 						<!-- Main form -->
 						<div class="form-wrap">
@@ -115,42 +117,86 @@
 								<span class="mbri-flag"></span>
 								Этим флажком отмечены поля обязательные к заполнению
 							</p>
-							<h5>Личные данные</h5>
+							<h5>Основные данные компании</h5>
+							<form class="" action=""><!-- Start form -->
+								
+								<div class="form-item --requared --simple">
+									<div class="input--yoshiko">
+										<select class="field--yoshiko" id="input12" name="" required>
+											<option value="Москва">Форма собственности 1</option>
+											<option value="Москва">Форма собственности 2</option>
+											<option value="Москва">Форма собственности 3</option>
+										</select>
+										<label class="label--yoshiko" for="input12">
+											<span class="content--yoshiko" data-content="ФОРМА СОБСТВЕННОСТИ:">
+												Форма собственности:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --requared">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input13" type="text" name="" value="" required>
+										<label class="label--yoshiko" for="input13">
+											<span class="content--yoshiko" data-content="НАЗВАНИЕ ЮРИДИЧЕСКОГО ЛИЦА">
+												Название юридического лица
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --requared">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input14" type="text" name="" value="" required>
+										<label class="label--yoshiko" for="input14">
+											<span class="content--yoshiko" data-content="ИНН">
+												ИНН (Ваш личный логин)
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --requared">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input15" type="text" name="" value="" required>
+										<label class="label--yoshiko" for="input15">
+											<span class="content--yoshiko" data-content="КПП">
+												КПП
+											</span>
+										</label>
+									</div>
+								</div>
+							</form><!-- End form -->
+						</div>
+						<div class="form-wrap">
+							<h5>Юридический адрес</h5>
 							<form class="" action=""><!-- Start form -->
 								<div class="form-item --requared">
-									<input id="input3" type="text" name="" value="" placeholder="Фамилия">
-								</div>
-								<div class="form-item --requared">
-									<input id="input4" type="text" name="" value="" placeholder="Имя">
-								</div>
-								<div class="form-item --requared">
-									<input id="input5" type="text" name="" value="" placeholder="Отчество">
-								</div>
-								<div class="form-item --requared">
-									<input id="input6" type="text" name="" value="" placeholder="Телефон">
-									<div class="checkbox">
-										<input id="checkbox2" type="checkbox" name="" value="">
-										<label for="checkbox2">Разрешить показ работодателю</label>
+									<div class="input--yoshiko input--filled">
+										<input class="field--yoshiko" id="input16" type="number" name="" value="" required>
+										<label class="label--yoshiko" for="input16">
+											<span class="content--yoshiko" data-content="ИНДЕКС">
+												Индекс
+											</span>
+										</label>
 									</div>
-								</div>
-								
 									
-								
+								</div>
 								<div class="form-item --requared">
-									<input id="input7" type="text" name="" value="" placeholder="ИНН">
-									<div class="checkbox">
-										<input id="checkbox3" type="checkbox" name="" value="">
-										<label for="checkbox3">Разрешить показ работодателю</label>
+									<div class="input--yoshiko input--filled">
+										<input class="field--yoshiko" id="input17" type="text" name="" value="" required>
+										<label class="label--yoshiko" for="input17">
+											<span class="content--yoshiko" data-content="ОБЛАСТЬ">
+												Область
+											</span>
+										</label>
 									</div>
+								
 								</div>
-								
-									
-								
 							</form><!-- End form -->
-							
-							<a class="btn _small --download">ЗАГРУЗИТь ФОТО</a>
 						</div>
-					</div><!-- End Form -->
+					</div><!-- End MAIN Form -->
 					
 					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><!-- Start Help -->
 						<h4>ПОМОЩЬ ПРИ ЗАПОЛНЕНИИ</h4>
@@ -164,7 +210,30 @@
 						<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
 						<p>Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
 					</div><!-- End Help -->
-				</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="form-item --message">
+							<div class="checkbox">
+								<input id="checkbox4" type="checkbox" name="" value="">
+								<label for="checkbox4">Вы подтверждаете достоверность введенной
+									информации</label>
+							</div>
+							<div class="checkbox">
+								<input id="checkbox5" type="checkbox" name="" value="">
+								<label for="checkbox5">Вы даете согласие на обработку персональных
+									данных</label>
+							</div>
+							<div class="checkbox">
+								<input id="checkbox6" type="checkbox" name="" value="">
+								<label for="checkbox6">
+									Вы подтверждаю свое согласие с
+									<a href="#">Условиями пользования</a> сайтом northwork.ru и
+									<a href="#">Политикой конфиденциальности</a>
+								</label>
+							</div>
+						</div>
+						<a href="#finish" class="btn _large --download">Зарегистрироваься</a>
+					</div>
+				</div><!-- End row -->
 			</div>
 			<!-- End content -->
 		</div>
