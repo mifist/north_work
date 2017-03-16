@@ -18194,3 +18194,41 @@ input[type="file"]::-webkit-file-upload-button {
 .navigation .alignright i:hover {
   color: rgba(37, 42, 25, 0.75);
 }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 1023px) {
+  .page-default {
+    padding: 5px;
+  }
+  .page-default .wrap-content,
+  .wrap-content {
+    padding: 0;
+  }
+  .form-wrap {
+    padding: 15px;
+  }
+  .btn {
+    min-width: 110px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .page-default {
+    padding: 15px;
+  }
+  .page-default .wrap-content,
+  .wrap-content {
+    padding: 0;
+  }
+  .form-wrap {
+    padding: 15px 30px;
+  }
+  .btn {
+    min-width: 130px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
