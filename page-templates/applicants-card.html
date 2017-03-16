@@ -96,70 +96,231 @@
 		<div class="page container">
 			<!-- Start content -->
 			<div class="entry-content">
-				<div class="login-logo">
-					<img src="../assets/images/icons/logo_text.png" alt="North Work">
-				</div>
-				<div class="login-wrap">
-					<div class="login-wrap_title">
-						<h4>ВХОД В ЛИЧНЫЙ КАБИНЕТ</h4>
+				<div class="row"><!-- Start row -->
+					<h2 class="entry-title">КАРТОЧКА СОИСКАТЕЛЯ</h2>
+					<div class="entry-more">
+						<p>Пожалуйста, указывайте корректные данные</p>
 					</div>
-					<div class="login-wrap_form">
-						<form action=""> <!-- Start form -->
-							
-							<div class="row form-item"><!-- Start row -->
-								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pull-right">
-									<label for="check1">Логин:</label>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left-card"><!-- Start Form -->
+						<!-- Photo -->
+						<div class="form-wrap">
+							<h5>Фото профиля</h5>
+							<div class="form-image">
+								<img src="../assets/images/face.png" alt="Profile photo">
+							</div>
+							<a class="btn _small --download">Изменить ФОТО</a>
+						</div>
+						<!-- Main form -->
+						<div class="form-wrap">
+							<h5>Личные данные</h5>
+							<form class="" action=""><!-- Start form -->
+								
+								<div class="form-item">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input3" type="text" name="" value="">
+										<label class="label--yoshiko" for="input3">
+											<span class="content--yoshiko" data-content="Фамилия">
+												Фамилия
+											</span>
+										</label>
+									</div>
 								</div>
-								<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-									<input id="check1" type="text" name="" value="" placeholder="Введите логин">
+								
+								<div class="form-item">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input4" type="text" name="" value="">
+										<label class="label--yoshiko" for="input4">
+											<span class="content--yoshiko" data-content="Имя">
+												Имя
+											</span>
+										</label>
+									</div>
 								</div>
-							</div><!-- End row -->
-							
-							<div class="row form-item"><!-- Start row -->
-								<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 pull-right">
-									<label for="check2">Пароль:</label>
+								
+								<div class="form-item">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input5" type="text" name="" value="">
+										<label class="label--yoshiko" for="input5">
+											<span class="content--yoshiko" data-content="Отчество">
+												Отчество
+											</span>
+										</label>
+									</div>
 								</div>
-								<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-									<input id="check2" type="text" name="" value="" placeholder="Введите пароль">
+								
+								<div class="form-item">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input30" type="tel" name="" value="">
+										<label class="label--yoshiko" for="input30">
+											<span class="content--yoshiko" data-content="Телефон">
+												Телефон
+											</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="checkbox2" type="checkbox" name="" value="">
+										<label for="checkbox2">Разрешить показ работодателю</label>
+									</div>
 								</div>
-							</div><!-- End row -->
-							
-							<div class="form-item">
-								<div class="checkbox">
-									<input id="checkbox1" type="checkbox" name="" value="" checked>
-									<label for="checkbox1">Запомниь меня</label>
+								
+								
+								
+								<div class="form-item">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input31" type="text" name="" value="">
+										<label class="label--yoshiko" for="input31">
+											<span class="content--yoshiko" data-content="ИНН">
+												ИНН (Ваш личный логин)
+											</span>
+										</label>
+									</div>
+									<div class="checkbox">
+										<input id="checkbox3" type="checkbox" name="" value="">
+										<label for="checkbox3">Разрешить показ работодателю</label>
+									</div>
+								</div>
+							</form><!-- End form -->
+							<a class="btn _small --download">Изменить</a>
+						</div>
+					</div><!-- End LEFT Form -->
+					
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 right-card"><!-- Start Form -->
+						<!-- Main form -->
+						<div class="form-wrap">
+							<h5>Резюме</h5>
+							<form class="" action=""><!-- Start form -->
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input6" type="date" name="" value="">
+										<label class="label--yoshiko" for="input6">
+											<span class="content--yoshiko" data-content="Дата рождения:">
+												Дата рождения:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<select class="field--yoshiko" id="input7" name="">
+											<option value="Москва">Москва</option>
+											<option value="Москва">Москва</option>
+											<option value="Москва">Москва</option>
+										</select>
+										<label class="label--yoshiko" for="input7">
+											<span class="content--yoshiko" data-content="Регион проживания:">
+												Регион проживания:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<textarea class="field--yoshiko" id="input8" type="text" name="" placeholder="(через запятую)"></textarea>
+										<label class="label--yoshiko" for="input8">
+											<span class="content--yoshiko" data-content="Образование:">
+												Образование:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<textarea class="field--yoshiko" id="input9" name="" placeholder="(через запятую)"></textarea>
+										<label class="label--yoshiko" for="input9">
+											<span class="content--yoshiko" data-content="Предыдущие места работы:">
+												Предыдущие места работы:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input10" type="text" name=""
+										       placeholder="Например, '10 лет'">
+										<label class="label--yoshiko" for="input10">
+											<span class="content--yoshiko" data-content="Общий стаж:">
+												Общий стаж:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<textarea class="field--yoshiko" id="input11" name=""
+										          placeholder="Введите пожелания"></textarea>
+										<label class="label--yoshiko" for="input11">
+											<span class="content--yoshiko" data-content="Пожелания к будущей работе:">
+												Пожелания к будущей работе:
+											</span>
+										</label>
+									</div>
+								</div>
+							</form><!-- End form -->
+							<a class="btn _small --download">Изменить</a>
+						</div>
+					
+					</div><!-- End RIGHT Form -->
+					
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<h4>МОИ УДОСТОВЕРЕНИЯ</h4>
+						<div class="form-item --download-file --certifications">
+							<div class="main-item">
+								<div class="form-item --simple">
+									<div class="checkbox">
+										<input id="checkbox25" type="checkbox" name="" value="" checked>
+										<label for="checkbox25">DIE Небольшие автобусы с прицепом</label>
+									</div>
+									<div class="input--yoshiko file-form">
+										<label id="fileformlabel" class="item-field" for="input33"></label>
+										<button type="button" name="" value="" class="btn _small --file">Выбрать</button>
+										<input id="input33" class="field--yoshiko" type="file" name="fileupload" value="fileupload" onchange="getName(this.value);">
+									</div>
 								</div>
 							</div>
 							
-							<div class="login-item">
-								<div class="form-item_link">
-									<a href="#">Забыли пароль?</a>
-									или
-									<a href="choice-login.html">Зарегистрироваться</a>
+							<div class="main-item">
+								<div class="form-item --simple">
+									<div class="checkbox">
+										<input id="checkbox26" type="checkbox" name="" value="" checked>
+										<label for="checkbox26">DIE Небольшие автобусы с прицепом</label>
+									</div>
+									<div class="input--yoshiko file-form">
+										<label id="fileformlabel" class="item-field" for="input34"></label>
+										<button type="button" name="" value="" class="btn _small --file">Выбрать</button>
+										<input id="input34" class="field--yoshiko" type="file" name="fileupload" value="fileupload" onchange="getName(this.value);">
+									</div>
 								</div>
 							</div>
 							
-							<div class="login-item">
-								<a href="#" class="btn _small">войти</a>
-							</div>
-							
-							<div class="login-item">
-								<span> Войти с помощью</span>
-								<ul class="social-wrap login">
-									<li>
-										<a class="fa fa-facebook-official" aria-hidden="true" href="#"></a>
-									</li>
-									<li>
-										<a class="fa fa-vk" aria-hidden="true" href="#"></a>
-									</li>
-									<li>
-										<a class="fa fa-google-plus" aria-hidden="true" href="#"></a>
-									</li>
-								</ul>
-							</div>
-						</form> <!-- End form -->
+							<a href="#" class="btn _large --download">ЗАГРУЗИТЬ ЕЩЕ</a>
+						</div>
 					</div>
-				</div>
+					
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<h4>ДАННЫЕ ОБ АТТЕСТАЦИИ</h4>
+						<div class="form-item --attestation">
+							<div class="checkbox">
+								<input id="checkbox15" type="checkbox" name="" value="">
+								<label for="checkbox15">Д.1. Гидротехнические сооружения объектов промышленности</label>
+							</div>
+							<div class="checkbox">
+								<input id="checkbox16" type="checkbox" name="" value="">
+								<label for="checkbox16">Д.2. Гидротехнические сооружения объектов энергетики</label>
+							</div>
+							<div class="checkbox">
+								<input id="checkbox17" type="checkbox" name="" value="">
+								<label for="checkbox17">Д.3. Гидротехнические сооружения объектов водохозяйственного</label>
+							</div>
+						</div>
+						<a href="#add_certifications" class="btn _large --download">ДОБАВИТЬ</a>
+					</div>
+				</div><!-- End row -->
 			</div>
 			<!-- End content -->
 		</div>
