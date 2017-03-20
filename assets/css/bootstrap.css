@@ -16546,6 +16546,32 @@ a::after {
   margin: 0;
 }
 
+.area-inf__purse {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+}
+
+.area-inf__purse .mbri-cash {
+  margin-right: 15px;
+  font-size: 2.5rem;
+}
+
 /* font-family: "FiraSans"; */
 @font-face {
   font-family: "FiraSansRegular";
@@ -17199,7 +17225,9 @@ textarea.field--yoshiko + .label--yoshiko {
 }
 
 .radio {
-  padding-left: 20px;
+  padding-left: 0;
+  text-align: left;
+  width: 100%;
 }
 
 .radio label {
@@ -17210,6 +17238,7 @@ textarea.field--yoshiko + .label--yoshiko {
 }
 
 .radio label:before {
+  margin-top: 6px;
   content: "";
   display: inline-block;
   position: absolute;
@@ -17224,19 +17253,21 @@ textarea.field--yoshiko + .label--yoshiko {
 }
 
 .radio label:after {
+  margin-top: 5px;
   display: inline-block;
   position: absolute;
   content: " ";
-  width: 11px;
-  height: 11px;
-  left: 3px;
-  top: 3px;
+  width: 8px;
+  height: 8px;
+  left: 5px;
+  top: 5px;
   margin-left: -20px;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #ec971c;
   -webkit-transform: scale(0, 0);
   -ms-transform: scale(0, 0);
   transform: scale(0, 0);
+  color: #ec971c;
   transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33), -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
@@ -17571,7 +17602,7 @@ input[type="file"]::-webkit-file-upload-button {
   margin: 0 auto;
   max-width: 400px;
   max-height: 175px;
-  width: auto;
+  width: 100%;
   height: auto;
   border: 1px solid #ccc;
 }
@@ -17579,7 +17610,8 @@ input[type="file"]::-webkit-file-upload-button {
 .--message,
 .--subscrybe,
 .--certifications,
-.--attestation {
+.--attestation,
+.--bill {
   max-width: 600px;
   width: 100%;
   text-align: left;
@@ -17589,8 +17621,13 @@ input[type="file"]::-webkit-file-upload-button {
 .--message .checkbox,
 .--subscrybe .checkbox,
 .--certifications .checkbox,
-.--attestation .checkbox {
+.--attestation .checkbox,
+.--bill .checkbox {
   text-align: left;
+}
+
+.--bill {
+  padding-left: 20px;
 }
 
 .checked + .place-second .form-item {
@@ -18449,6 +18486,9 @@ input[type="file"]::-webkit-file-upload-button {
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (max-width: 1024px) {
+  .area-inf__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
   .breadcrumbs .breadcrumbs-list li {
     width: 100%;
     margin-right: 10px;
