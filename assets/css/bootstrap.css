@@ -14911,10 +14911,6 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
-ul {
-  padding-left: 0;
-}
-
 ul li ul, ul li ol {
   padding-left: 30px;
   margin-top: 5px;
@@ -16396,6 +16392,160 @@ a::after {
   text-align: center;
 }
 
+.menu-area {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-area .btn {
+  white-space: pre-line;
+  letter-spacing: normal;
+  line-height: 2.5rem;
+}
+
+.wrap__name h5 {
+  margin-bottom: 0;
+}
+
+.wrap__name h6 {
+  color: #ec971c;
+}
+
+.wrap__information {
+  padding: 10px;
+  border-top: 1px solid #ec971c;
+  border-bottom: 1px solid #ec971c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.wrap__information p, .wrap__information span {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.wrap__information .row {
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.wrap__button .btn {
+  margin: 0 auto;
+}
+
+.wrap__likes .likes__item.--like, .wrap__likes .likes__item.--dislike {
+  border: none;
+}
+
+.wrap__likes .likes__item.--like:before, .wrap__likes .likes__item.--dislike:before {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.wrap__likes .likes__item.--like:hover, .wrap__likes .likes__item.--dislike:hover {
+  background: transparent;
+  color: #3aaa35;
+}
+
+.wrap__likes .likes__item.--dislike:before {
+  font-weight: 600;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.wrap__likes .likes__item.--dislike:hover {
+  color: #ff0000;
+}
+
+.wrap__offers {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.wrap__offers span, .wrap__offers p {
+  width: auto !important;
+  margin-bottom: 0;
+  display: inline;
+  text-transform: uppercase;
+}
+
+.wrap__offers a {
+  display: block;
+}
+
+.wrap__applicants-list {
+  padding: 10px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #ec971c;
+  border-bottom: 1px solid #ec971c;
+}
+
+.wrap__applicants-list h5 {
+  margin-bottom: 15px;
+}
+
+.wrap__applicants-list ul {
+  list-style: none;
+}
+
+.wrap__applicants-list ul li {
+  margin-bottom: 5px;
+}
+
+.area-inf {
+  background: rgba(37, 42, 25, 0.75);
+  color: #FFFFFF;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.area-inf span, .area-inf p, .area-inf b, .area-inf i, .area-inf em, .area-inf strong, .area-inf h1, .area-inf h2, .area-inf h3, .area-inf h4, .area-inf h5, .area-inf h6 {
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+
 /* font-family: "FiraSans"; */
 @font-face {
   font-family: "FiraSansRegular";
@@ -16517,12 +16667,18 @@ a::after {
   display: block;
   padding: 10px;
   margin: 15px auto;
+  white-space: pre-line;
 }
 
-.btn:hover {
+.btn:hover, .btn.active {
   border: 3px solid #ec971c;
   background: #ec971c;
   color: #FFFFFF;
+}
+
+.btn:hover .badge, .btn.active .badge {
+  background: #FFFFFF;
+  color: #ec971c;
 }
 
 .btn._small {
@@ -16636,6 +16792,10 @@ a::after {
   color: #FFFFFF;
 }
 
+.--off {
+  opacity: .5;
+}
+
 .--like {
   border: 3px solid #3aaa35;
   color: #3aaa35;
@@ -16647,6 +16807,16 @@ a::after {
   border: 3px solid #3aaa35;
   background: #3aaa35;
   color: #FFFFFF;
+}
+
+.badge {
+  margin-left: 15px;
+  background: #ec971c;
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  transition-property: color, border-color, background-color, opacity, -webkit-transform;
+  transition-property: color, border-color, background-color, opacity, transform;
+  transition-property: color, border-color, background-color, opacity, transform, -webkit-transform;
 }
 
 .dotted {
