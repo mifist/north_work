@@ -298,7 +298,7 @@
 								</div>
 							</div>
 							
-							<a href="#" class="btn _large --download">ЗАГРУЗИТЬ ЕЩЕ</a>
+							<a href="#add_certifications" class="btn _large --download">ЗАГРУЗИТЬ ЕЩЕ</a>
 						</div>
 					</div>
 					
@@ -318,7 +318,7 @@
 								<label for="checkbox17">Д.3. Гидротехнические сооружения объектов водохозяйственного</label>
 							</div>
 						</div>
-						<a href="#add_certifications" class="btn _large --download">ДОБАВИТЬ</a>
+						<a href="#" class="btn _large --download">ДОБАВИТЬ</a>
 					</div>
 				</div><!-- End row -->
 			</div>
@@ -389,20 +389,89 @@
 <!-- End footer -->
 
 <!-- Start Modal window -->
-<div id="invite_interview">
-	
+<div class="modal-overlay"></div>
+
+
+
+<div id="dislike" class="modal modal-window">
+	<div class="modal__header">
+		<h3>Вы желаете поставить негативную оценку Соискателю?</h3>
+	</div>
+	<div class="modal__content --center">
+		<p>Заполните небольшую форму и после проверки администратором Ваша оценка будет учтена.</p>
+		<div class="form-item --requared --simple">
+			<div class="input--yoshiko">
+				<select class="field--yoshiko" id="input122" name="" required>
+					<option value="Причина 1">Причина 1</option>
+					<option value="Причина 2">Причина 2</option>
+					<option value="Причина 3">Причина 3</option>
+				</select>
+				<label class="label--yoshiko" for="input122">
+					<span class="content--yoshiko" data-content="Укажите причину негативной оценки:">
+						Укажите причину негативной оценки:
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-item --simple">
+			<div class="input--yoshiko">
+				<textarea class="field--yoshiko" id="input81" type="text" name="" placeholder="Сообщение"></textarea>
+				<label class="label--yoshiko" for="input81">
+					<span class="content--yoshiko" data-content="Опишите причину:">
+						Опишите причину:
+					</span>
+				</label>
+			</div>
+		</div>
+		<a class="btn _small _close">Отправить</a>
+	</div>
 </div>
-<div id="invite_work">
-	
+
+<div id="finish" class="modal modal-window">
+	<div class="modal__header">
+		<h3>ВАШИ ДАННЫЕ ОТПРАВЛЕНЫ НА ПРОВЕРКУ АДМИНИСТРАТОРУ</h3>
+	</div>
+	<div class="modal__content --center">
+		<p>На почту указанную при регистрации будет отправлена ссылка для подтверждения регистрации.</p>
+		<p>Спасибо за регистарцию!</p>
+		<a class="btn _small _close">Завершить</a>
+	</div>
 </div>
-<div id="finish">
-	
+
+<div id="write" class="modal modal-window">
+	<div class="modal__header">
+		<h3></h3>
+	</div>
+	<div class="modal__content --center">
+		
+		<a class="btn _small _close">Завершить</a>
+	</div>
 </div>
-<div id="write">
-	
-</div>
-<div id="add_certifications">
-	
+
+<div id="add_certifications" class="modal modal-window">
+	<div class="modal__header">
+		<h3>Добавить удостоверение</h3>
+	</div>
+	<div class="modal__content --center">
+		<div class="form-item --simple">
+			<div class="input--yoshiko">
+				<textarea class="field--yoshiko" id="input8" type="text" name="" placeholder=""></textarea>
+				<label class="label--yoshiko" for="input8">
+					<span class="content--yoshiko" data-content="Введите название удостоверения:">
+						Введите название удостоверения:
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-item --simple">
+			<div class="input--yoshiko file-form">
+				<label id="fileformlabel" class="item-field" for="input34"></label>
+				<button type="button" name="" value="" class="btn _small --file">Выбрать</button>
+				<input id="input34" class="field--yoshiko" type="file" name="fileupload" value="fileupload" onchange="getName(this.value);">
+			</div>
+		</div>
+		<a class="btn _small _close">сохранить</a>
+	</div>
 </div>
 <!-- End Modal window -->
 
@@ -425,18 +494,44 @@
 	}
 	jQuery(function($) {
 		
-		//scroll to top and bottom
-		/*	   $('a[href="#moveToTop"]').click(function() {
-		 $("html, body").animate({ scrollTop: 0 }, 800 );
-		 return false;
-		 });*/
-		
 		// toggle menu
 		jQuery('.navbar-toggle').click(function() {
-			
 			jQuery(".top-bar").toggleClass('menu-open');
 			return false;
 		});
+		
+		// modal window
+		$('.modal,.modal-overlay').hide();
+		$('a._close').click(function () {
+			$('.modal,.modal-overlay').hide();
+		});
+		$(document).mouseup(function (e){ // событие клика по веб-документу
+			var div = $(".modal,.modal-overlay"); // тут указываем ID элемента
+			if (!div.is(e.target) // если клик был не по нашему блоку
+				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+				div.hide(); // скрываем его
+			}
+		}); // end modal window
+		
+		
+		// finish
+		$('a[href="#finish"]').click(function () {
+			$('#finish').show();
+			$('.modal-overlay').show();
+		});
+		// dislike
+		$('a[href="#dislike"]').click(function () {
+			$('#dislike').show();
+			$('.modal-overlay').show();
+		});
+		// write
+		// add_certifications
+		$('a[href="#add_certifications"]').click(function () {
+			$('#add_certifications').show();
+			$('.modal-overlay').show();
+		});
+		
+		
 		
 	});
 	/*!
