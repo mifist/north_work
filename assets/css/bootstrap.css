@@ -16689,6 +16689,11 @@ a::after {
           transform: scale(1.15);
 }
 
+.title-details {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 /* font-family: "FiraSans"; */
 @font-face {
   font-family: "FiraSansRegular";
