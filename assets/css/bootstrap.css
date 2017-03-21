@@ -16319,6 +16319,10 @@ a::after {
   z-index: 1000;
 }
 
+.modal-window .row {
+  width: 100%;
+}
+
 .modal-overlay {
   position: fixed;
   left: 0;
@@ -16405,10 +16409,46 @@ a::after {
 
 .wrap__name h5 {
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .wrap__name h6 {
   color: #ec971c;
+}
+
+.wrap__name .wrap__date {
+  text-align: right;
+}
+
+.wrap__name > .wrap__city {
+  text-align: left;
+}
+
+.wrap__name .wrap__city {
+  text-align: center;
+}
+
+.wrap__name .name__line,
+.wrap__name .wrap__line {
+  border-bottom: 1px dotted rgba(37, 42, 25, 0.31);
+  padding-bottom: 15px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.wrap__name .name__line h1, .wrap__name .name__line h2, .wrap__name .name__line h3, .wrap__name .name__line h4, .wrap__name .name__line h5, .wrap__name .name__line h6,
+.wrap__name .wrap__line h1,
+.wrap__name .wrap__line h2,
+.wrap__name .wrap__line h3,
+.wrap__name .wrap__line h4,
+.wrap__name .wrap__line h5,
+.wrap__name .wrap__line h6 {
+  margin: 0;
+}
+
+.wrap__name .wrap__line {
+  margin-bottom: 0;
+  border: none;
 }
 
 .wrap__information {
@@ -16448,8 +16488,33 @@ a::after {
   margin: 0 auto;
 }
 
+.wrap__button {
+  margin-top: 30px;
+}
+
 .wrap__button .btn {
   margin: 0 auto;
+}
+
+.wrap__button .row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrap__likes .likes__item.--like, .wrap__likes .likes__item.--dislike {
@@ -16572,6 +16637,58 @@ a::after {
   font-size: 2.5rem;
 }
 
+/* sorting */
+.sorting {
+  height: 30px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sorting h6 {
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+  width: auto;
+}
+
+.sorting a[class*='mbri-'] {
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 15px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  transition-property: color, border-color, background-color, opacity, -webkit-transform;
+  transition-property: color, border-color, background-color, opacity, transform;
+  transition-property: color, border-color, background-color, opacity, transform, -webkit-transform;
+}
+
+.sorting a[class*='mbri-']:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
 /* font-family: "FiraSans"; */
 @font-face {
   font-family: "FiraSansRegular";
@@ -16680,6 +16797,11 @@ a::after {
 }
 
 .btn {
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  transition-property: color, border-color, background-color, opacity, -webkit-transform;
+  transition-property: color, border-color, background-color, opacity, transform;
+  transition-property: color, border-color, background-color, opacity, transform, -webkit-transform;
   border: 3px solid #ec971c;
   font-size: 1.9rem;
   line-height: 2rem;
@@ -16694,6 +16816,11 @@ a::after {
   padding: 10px;
   margin: 15px auto;
   white-space: pre-line;
+}
+
+.btn p {
+  margin-bottom: 0;
+  width: auto;
 }
 
 .btn:hover, .btn.active {
@@ -16724,6 +16851,46 @@ a::after {
 .btn._large {
   max-width: 350px;
   margin-bottom: 15px;
+}
+
+.btn.--event, .btn.--event-orange {
+  color: #ff0000;
+  border: 3px solid #ff0000;
+  background: transparent;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn.--event:hover, .btn.--event-orange:hover {
+  cursor: inherit;
+  background: transparent;
+  border: 3px solid #ff0000;
+  color: #ff0000;
+}
+
+.btn.--event {
+  width: 100%;
+  max-width: initial;
+}
+
+.btn.--event-orange {
+  color: #ec971c;
+  border: 3px solid #ec971c;
+}
+
+.btn.--event-orange:hover {
+  border: 3px solid #ec971c;
+  color: #ec971c;
 }
 
 .--file {
@@ -17602,9 +17769,13 @@ input[type="file"]::-webkit-file-upload-button {
   margin: 0 auto;
   max-width: 400px;
   max-height: 175px;
-  width: 100%;
+  width: auto;
   height: auto;
   border: 1px solid #ccc;
+}
+
+.form-image.logo img {
+  width: 100%;
 }
 
 .--message,
