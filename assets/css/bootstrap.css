@@ -16861,8 +16861,8 @@ a::after {
 .btn.--event, .btn.--event-orange {
   width: 100%;
   max-width: 500px;
-  color: #ff0000;
-  border: 3px solid #ff0000;
+  color: #000;
+  border: 1px solid #ff0000;
   background: transparent;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16876,27 +16876,36 @@ a::after {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  transition-property: color, border-color, background-color, opacity, -webkit-transform;
+  transition-property: color, border-color, background-color, opacity, transform;
+  transition-property: color, border-color, background-color, opacity, transform, -webkit-transform;
 }
 
 .btn.--event:hover, .btn.--event-orange:hover {
   cursor: inherit;
   background: transparent;
-  border: 3px solid #ff0000;
+  border: 1px solid #ff0000;
   color: #ff0000;
 }
 
 .btn.--event {
   width: 100%;
+  font-weight: 300;
 }
 
 .btn.--event-orange {
-  color: #ec971c;
-  border: 3px solid #ec971c;
+  border: 1px solid #918c84;
+  font-weight: 400;
+  text-transform: lowercase;
 }
 
 .btn.--event-orange:hover {
-  border: 3px solid #ec971c;
-  color: #ec971c;
+  color: #000;
+  border: 1px solid #ec971c;
+  font-weight: 400;
+  text-transform: lowercase;
 }
 
 .--file {
