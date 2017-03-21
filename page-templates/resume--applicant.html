@@ -98,94 +98,88 @@
 			<div class="entry-content">
 				<div class="row"><!-- Start row -->
 					<h2 class="entry-title">Форма регистрации</h2>
-					<div class="entry-more">
-						<p>Пожалуйста, указывайте корректные данные</p>
-					</div>
+					<p class="text-center entry-more">Пожалуйста, указывайте корректные данные</p>
 					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7"><!-- Start Form -->
-						<!-- Photo -->
-						<div class="form-wrap">
-							<a class="btn _small _back" onclick="history.back(); return false;">Назад</a>
-							<h5>Фото профиля</h5>
-							<div class="form-image">
-								<img src="../assets/images/face.png" alt="Profile photo">
-							</div>
-							<a class="btn _small --download">ЗАГРУЗИТь ФОТО</a>
-						</div>
 						<!-- Main form -->
 						<div class="form-wrap">
-							<p class="entry-warning">
-								<span class="mbri-flag"></span>
-								Этим флажком отмечены поля обязательные к заполнению
-							</p>
-							<h5>Личные данные</h5>
+							<a class="btn _small _back" onclick="history.back(); return false;">Назад</a>
+							<h5>Резюме</h5>
 							<form class="" action=""><!-- Start form -->
 								
-								<div class="form-item --requared">
+								<div class="form-item --simple">
 									<div class="input--yoshiko">
-										<input class="field--yoshiko" id="input3" type="text" name="" value="" required>
-										<label class="label--yoshiko" for="input3">
-											<span class="content--yoshiko" data-content="Фамилия">
-												Фамилия
-											</span>
-										</label>
-									</div>
-								</div>
-								
-								<div class="form-item --requared">
-									<div class="input--yoshiko">
-										<input class="field--yoshiko" id="input4" type="text" name="" value="" required>
-										<label class="label--yoshiko" for="input4">
-											<span class="content--yoshiko" data-content="Имя">
-												Имя
-											</span>
-										</label>
-									</div>
-								</div>
-								
-								<div class="form-item --requared">
-									<div class="input--yoshiko">
-										<input class="field--yoshiko" id="input5" type="text" name="" value="" required>
-										<label class="label--yoshiko" for="input5">
-											<span class="content--yoshiko" data-content="Отчество">
-												Отчество
-											</span>
-										</label>
-									</div>
-								</div>
-								
-								<div class="form-item --requared">
-									<div class="input--yoshiko">
-										<input class="field--yoshiko" id="input6" type="tel" name="" value="" required>
+										<input class="field--yoshiko" id="input6" type="date" name="" value="">
 										<label class="label--yoshiko" for="input6">
-											<span class="content--yoshiko" data-content="Телефон">
-												Телефон
+											<span class="content--yoshiko" data-content="Дата рождения:">
+												Дата рождения:
 											</span>
 										</label>
-									</div>
-									<div class="checkbox">
-										<input id="checkbox2" type="checkbox" name="" value="">
-										<label for="checkbox2">Разрешить показ работодателю</label>
 									</div>
 								</div>
 								
-									
-								
-								<div class="form-item --requared">
+								<div class="form-item --simple">
 									<div class="input--yoshiko">
-										<input class="field--yoshiko" id="input7" type="text" name="" value="" required>
+										<select class="field--yoshiko" id="input7" name="">
+											<option value="Москва">Москва</option>
+											<option value="Москва">Москва</option>
+											<option value="Москва">Москва</option>
+										</select>
 										<label class="label--yoshiko" for="input7">
-											<span class="content--yoshiko" data-content="ИНН">
-												ИНН (Ваш личный логин)
+											<span class="content--yoshiko" data-content="Регион проживания:">
+												Регион проживания:
 											</span>
 										</label>
 									</div>
-									<div class="checkbox">
-										<input id="checkbox3" type="checkbox" name="" value="">
-										<label for="checkbox3">Разрешить показ работодателю</label>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<textarea class="field--yoshiko" id="input8" type="text" name="" placeholder="(через запятую)"></textarea>
+										<label class="label--yoshiko" for="input8">
+											<span class="content--yoshiko" data-content="Образование:">
+												Образование:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<textarea class="field--yoshiko" id="input9" name="" placeholder="(через запятую)"></textarea>
+										<label class="label--yoshiko" for="input9">
+											<span class="content--yoshiko" data-content="Предыдущие места работы:">
+												Предыдущие места работы:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<input class="field--yoshiko" id="input10" type="text" name=""
+										       placeholder="Например, '10 лет'">
+										<label class="label--yoshiko" for="input10">
+											<span class="content--yoshiko" data-content="Общий стаж:">
+												Общий стаж:
+											</span>
+										</label>
+									</div>
+								</div>
+								
+								<div class="form-item --simple">
+									<div class="input--yoshiko">
+										<textarea class="field--yoshiko" id="input11" name=""
+										          placeholder="Введите пожелания"></textarea>
+										<label class="label--yoshiko" for="input11">
+											<span class="content--yoshiko" data-content="Пожелания к будущей работе:">
+												Пожелания к будущей работе:
+											</span>
+										</label>
 									</div>
 								</div>
 							</form><!-- End form -->
 						</div>
+						
 					</div><!-- End MAIN Form -->
 					
 					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><!-- Start Help -->
@@ -201,7 +195,27 @@
 						<p>Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
 					</div><!-- End Help -->
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<a href="applicant-resume.html" class="btn _large --download">Далее</a>
+						<div class="form-item --message">
+							<div class="checkbox">
+								<input id="checkbox4" type="checkbox" name="" value="">
+								<label for="checkbox4">Вы подтверждаете достоверность введенной
+									информации</label>
+							</div>
+							<div class="checkbox">
+								<input id="checkbox5" type="checkbox" name="" value="">
+								<label for="checkbox5">Вы даете согласие на обработку персональных
+									данных</label>
+							</div>
+							<div class="checkbox">
+								<input id="checkbox6" type="checkbox" name="" value="">
+								<label for="checkbox6">
+									Вы подтверждаю свое согласие с
+									<a href="#">Условиями пользования</a> сайтом northwork.ru и
+									<a href="#">Политикой конфиденциальности</a>
+								</label>
+							</div>
+						</div>
+						<a href="#finish" class="btn _large --download">Завершить</a>
 					</div>
 				</div><!-- End row -->
 			</div>
@@ -321,13 +335,37 @@
 	</div>
 </div>
 
-<div id="write" class="modal modal-window">
+<div id="demands" class="modal modal-window">
 	<div class="modal__header">
-		<h3></h3>
+		<h3>Не выполнены минимальные требования!</h3>
 	</div>
 	<div class="modal__content --center">
-		
-		<a class="btn _small _close">Завершить</a>
+		<p>Для подробного просмотра вакансии <a href="bill-applicant.html">оплатите абонемент</a></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a class="btn _large _close">Закрыть</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a href="bill-applicant.html" class="btn _large">Перейти к оплате</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="respond" class="modal modal-window">
+	<div class="modal__header">
+		<h3>Ваше резюме будет доступно для работодателя!</h3>
+	</div>
+	<div class="modal__content --center">
+		<p>В случае заинтересованности вашей кандидатурой, Работодатель пригласит Вас в Чат для общения. Информацию
+			о всех приглашениях Вы сможете найти в своем <a href="private-area-applicant.html">личном кабинете</a></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a class="btn _large _close">Подтвердить</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a class="btn _large _close">Закрыть</a>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -396,6 +434,16 @@
 			}
 		}); // end modal window
 		
+		// demands
+		$('a[href="#demands"]').click(function () {
+			$('#demands').show();
+			$('.modal-overlay').show();
+		});
+		// respond
+		$('a[href="#respond"]').click(function () {
+			$('#respond').show();
+			$('.modal-overlay').show();
+		});
 		// finish
 		$('a[href="#finish"]').click(function () {
 			$('#finish').show();

@@ -277,13 +277,37 @@
 	</div>
 </div>
 
-<div id="write" class="modal modal-window">
+<div id="demands" class="modal modal-window">
 	<div class="modal__header">
-		<h3></h3>
+		<h3>Не выполнены минимальные требования!</h3>
 	</div>
 	<div class="modal__content --center">
-		
-		<a class="btn _small _close">Завершить</a>
+		<p>Для подробного просмотра вакансии <a href="bill-applicant.html">оплатите абонемент</a></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a class="btn _large _close">Закрыть</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a href="bill-applicant.html" class="btn _large">Перейти к оплате</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="respond" class="modal modal-window">
+	<div class="modal__header">
+		<h3>Ваше резюме будет доступно для работодателя!</h3>
+	</div>
+	<div class="modal__content --center">
+		<p>В случае заинтересованности вашей кандидатурой, Работодатель пригласит Вас в Чат для общения. Информацию
+			о всех приглашениях Вы сможете найти в своем <a href="private-area-applicant.html">личном кабинете</a></p>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a class="btn _large _close">Подтвердить</a>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<a class="btn _large _close">Закрыть</a>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -352,6 +376,16 @@
 			}
 		}); // end modal window
 		
+		// demands
+		$('a[href="#demands"]').click(function () {
+			$('#demands').show();
+			$('.modal-overlay').show();
+		});
+		// respond
+		$('a[href="#respond"]').click(function () {
+			$('#respond').show();
+			$('.modal-overlay').show();
+		});
 		// finish
 		$('a[href="#finish"]').click(function () {
 			$('#finish').show();
