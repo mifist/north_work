@@ -16859,6 +16859,8 @@ a::after {
 }
 
 .btn.--event, .btn.--event-orange {
+  width: 100%;
+  max-width: 500px;
   color: #ff0000;
   border: 3px solid #ff0000;
   background: transparent;
@@ -16885,7 +16887,6 @@ a::after {
 
 .btn.--event {
   width: 100%;
-  max-width: initial;
 }
 
 .btn.--event-orange {
