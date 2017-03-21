@@ -16692,6 +16692,7 @@ a::after {
 .title-details {
   margin-top: 40px;
   margin-bottom: 40px;
+  font-weight: 400;
 }
 
 /* font-family: "FiraSans"; */
